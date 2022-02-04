@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _ImagePane = _interopRequireDefault(require("./ImagePane.jsx"));
+var _ImagePane = _interopRequireDefault(require("./ImagePane.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
