@@ -18,9 +18,8 @@ function ImagePane({ className, src, alt, content, children, contentClassName })
 				<button
 					className={cn.close}
 					onClick={() => setOpen(prev => !prev)}
-				>
-					+
-				</button>
+				>+</button>
+				<div className={clsx(cn.faint)}>{content?.tag}</div>
 				<div className={clsx(cn.dots, cn.top)}></div>
 				<div className={clsx(cn.dots, cn.bottom)}></div>
 				<div className={clsx(cn.content, open && cn.open)}>

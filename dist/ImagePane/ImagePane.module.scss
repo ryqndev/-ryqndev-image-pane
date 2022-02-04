@@ -1,12 +1,4 @@
 :root {
-    // --image-pane-background-color: #151515;
-    // --image-pane-border-color: #e0e0e0;
-    // --image-pane-title-color: rgb(255, 94, 0);
-    // --image-pane-span-color: #e17eff;
-    // --image-pane-content-color: #aaa;
-    // --image-pane-dot-color: #aaa;
-    // --image-pane-close-border: #cccccc44;
-    // --image-pane-box-shadow: #151515;
     --image-pane-background-color: #ffffff;
     --image-pane-border-color: #e0e0e0;
     --image-pane-title-color: #f68080;
@@ -64,6 +56,23 @@
             border-color: var(--image-pane-background-color);
             background-color: #88888866;
         }
+    }
+
+    &>.faint {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        // margin: 0 -10vw -10vw 0;
+        margin-right: 3vw;
+        font-size: 20vw;
+        color: #f6808011;
+        // user-select: none;
+        pointer-events: none;
+        text-transform: uppercase;
+        font-family: 'Poppins';
+        text-align: right;
+        line-height: 1.1em;
+        font-weight: bold;
     }
 
     &>.dots {

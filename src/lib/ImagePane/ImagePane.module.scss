@@ -1,0 +1,169 @@
+:root {
+    --image-pane-background-color: #ffffff;
+    --image-pane-border-color: #e0e0e0;
+    --image-pane-title-color: #f68080;
+    --image-pane-span-color: #ffb3b3;
+    --image-pane-content-color: #666;
+    --image-pane-dot-color: #f68080;
+    --image-pane-close-border: #88888844;
+    --image-pane-box-shadow: #aaa;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: min(15vh, 12vw);
+    opacity: 0;
+    pointer-events: none;
+    background-color: var(--image-pane-background-color);
+
+    transition: opacity 250ms 500ms;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 40px;
+
+    &.open {
+        transition: opacity 250ms;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &>.close {
+        position: absolute;
+        top: 40px;
+        padding-bottom: 6px;
+        right: 50px;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #d6d6d6;
+        font-size: 2em;
+        transform: rotateZ(45deg);
+        border: none;
+        border-radius: 50%;
+        background-color: #ffffff00;
+        border: 3px solid var(--image-pane-close-border);
+        transition: background-color 250ms, border-color 250ms, color 350ms;
+
+        &:hover {
+            color: var(--image-pane-background-color);
+            border-color: var(--image-pane-background-color);
+            background-color: #88888866;
+        }
+    }
+
+    &>.faint {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        // margin: 0 -10vw -10vw 0;
+        margin-right: 3vw;
+        font-size: 20vw;
+        color: #f6808011;
+        // user-select: none;
+        pointer-events: none;
+        text-transform: uppercase;
+        font-family: 'Poppins';
+        text-align: right;
+        line-height: 1.1em;
+        font-weight: bold;
+    }
+
+    &>.dots {
+        z-index: -1;
+        position: absolute;
+
+        $dot-size: 2px;
+        $dot-space: 24px;
+
+        background:
+            linear-gradient(90deg, var(--image-pane-background-color) ($dot-space - $dot-size), transparent 1%) center,
+            linear-gradient(var(--image-pane-background-color) ($dot-space - $dot-size), transparent 1%) center,
+            var(--image-pane-dot-color);
+        background-size: $dot-space $dot-space;
+
+        &.top {
+            height: 200px;
+            width: 548px;
+            top: 5vh;
+            right: 5vh;
+        }
+
+        &.bottom {
+            height: 450px;
+            width: 200px;
+            bottom: 5vh;
+            left: 5vh;
+        }
+    }
+
+    &>.content {
+        display: grid;
+        max-width: 38vw;
+        place-self: center;
+        font-family: 'Poppins', sans-serif;
+
+        &>span {
+            font-size: 1.3em;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: bold;
+            color: var(--image-pane-span-color);
+            transform: translateY(-40px);
+            opacity: 0;
+            transition: transform 1s, opacity 1s;
+        }
+
+        &>h2 {
+            font-size: 4em;
+            margin: 20px 0 50px;
+            line-height: 1em;
+            text-transform: uppercase;
+            transform: translateY(-40px);
+            opacity: 0;
+            color: var(--image-pane-title-color);
+            transition: transform 1s 200ms, opacity 1s 200ms;
+        }
+
+        &>p {
+            color: var(--image-pane-content-color);
+            font-size: 1.1em;
+            line-height: 1.7em;
+            transform: translateX(-40px);
+            opacity: 0;
+            margin-bottom: 20vh;
+            transition: transform 1s 400ms, opacity 700ms 400ms;
+        }
+
+        &.open>* {
+            transform: translateX(0) translateY(0);
+            opacity: 1;
+        }
+    }
+
+    &>.image {
+        border-radius: 4px;
+        max-height: 70vh;
+        max-width: 50vw;
+        place-self: center end;
+        box-shadow: 2px 1px 5px 0px var(--image-pane-box-shadow);
+        opacity: 0;
+        transform: translateX(50px);
+        transition: transform 700ms, opacity 550ms;
+
+        &.open {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+}
+
+.image-container {
+    cursor: pointer;
+}

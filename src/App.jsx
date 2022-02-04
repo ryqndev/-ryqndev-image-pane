@@ -1,4 +1,4 @@
-import { ImagePane } from './components';
+import ImagePane from './lib';
 import cn from './App.module.scss';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 				src='https://i.pinimg.com/736x/76/93/59/76935964bca553da191831f6b800d262.jpg'
 				alt='Girl in Gray'
 				content={{
-					tag: '/people',
+					tag: <>esta<wbr />blishments</>,
 					title: 'girl in gray',
 					description:
 						'One of the more notable works of the photographer. Taken in gray. Superposed upon the city scape - the details attract.',
