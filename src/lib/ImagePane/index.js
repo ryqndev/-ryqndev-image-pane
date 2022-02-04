@@ -1,4 +1,4 @@
-import ImagePane from './ImagePane.jsx';
+import ImagePane from './ImagePane.js';
 
 export default ImagePane;
 
