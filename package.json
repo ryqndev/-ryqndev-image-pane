@@ -1,7 +1,7 @@
 {
   "name": "@ryqndev/image-pane",
   "author": "Ryan Yang <ryanqyang@gmail.com> (https://ryqn.dev)",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
