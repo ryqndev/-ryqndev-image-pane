@@ -1,5 +1,6 @@
 # @ryqndev/image-pane
 
+A react component to display images when clicked.
 ## Usage 
 ```jsx
     <ImagePane
@@ -23,7 +24,7 @@
 |contentClassName|string|`content-class`|No|Custom CSS class to style the pane. applied to the parent container only|
 |src|string|https://boba.watch/bobawatch.png|Yes|link to image. uses html `<img>` underneath and uses same src attribute|
 |alt|string|view showing various screens from the app|No, but recommended for a11y|alternative text for image|
-|content|object| <pre>{ <br />    tag: 'boba watch',<br />    title: 'Splash Art',<br>    description: 'This is an <br /> overview of the splash art <br />that was created for the Boba <br/>Watch. The splash art is a <br />combination of the the various <br />screens that can be accessed.' <br/>}</pre> | No | content to be displayed on pane |
+|content|object| <pre>{ <br />    tag: '/ boba watch',<br />    title: 'Splash Art',<br>    description: 'This is an <br /> overview of the splash art <br />that was created for the Boba <br/>Watch. The splash art is a <br />combination of the the various <br />screens that can be accessed.' <br/>}</pre> | No | content to be displayed on pane |
 
 **note** The content json object does not have to be a string type. It can be a JSX component like so:
 ```js
