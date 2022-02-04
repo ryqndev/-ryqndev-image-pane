@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import cn from './ImagePane.module.scss';
 
-function ImagePane({ className, src, alt, content, children }) {
+function ImagePane({ className, src, alt, content, children, contentClassName }) {
 	const [open, setOpen] = useState(false);
 
 	return (
@@ -14,7 +14,7 @@ function ImagePane({ className, src, alt, content, children }) {
 				alt={alt}
 			/>
 
-			<div className={clsx(cn.container, open && cn.open)}>
+			<div className={clsx(cn.container, contentClassName, open && cn.open)}>
 				<button
 					className={cn.close}
 					onClick={() => setOpen(prev => !prev)}
