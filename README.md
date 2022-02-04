@@ -15,8 +15,8 @@ A react component to display images when clicked.
         }}
     />
 ```
-![Light Mode Example](./example-2.png)
-![Dark Mode Example](./example-dark.png)
+![Light Mode Example](./readme-assets/example-2.png)
+![Dark Mode Example](./readme-assets/example-dark.png)
 
 ## Parameters
 |Prop Name|Value|Example|Required|Description|
