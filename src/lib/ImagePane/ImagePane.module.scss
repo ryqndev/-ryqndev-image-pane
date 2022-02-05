@@ -11,6 +11,7 @@
 
 .container {
     position: fixed;
+    z-index: 1200;
     top: 0;
     left: 0;
     height: 100vh;
@@ -26,6 +27,7 @@
     display: grid;
     grid-template-columns: 1fr auto;
     column-gap: 40px;
+
 
     @media (max-aspect-ratio: 1/1) {
         padding: 10vw;
